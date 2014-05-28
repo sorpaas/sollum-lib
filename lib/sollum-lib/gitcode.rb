@@ -4,7 +4,7 @@ require 'net/https' # ruby 1.8.7 fix, remove at upgrade
 require 'uri'
 require 'open-uri'
 
-module Gollum
+module Sollum
   class Gitcode
     def initialize path
       raise(ArgumentError, 'path is nil or empty') if path.nil? or path.empty?

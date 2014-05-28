@@ -29,7 +29,7 @@ require File.expand_path('../gollum-lib/filter', __FILE__)
 # This is required for Ruby 1.8.7 which gollum still supports.
 $KCODE = 'U' if RUBY_VERSION[0, 3] == '1.8'
 
-module Gollum
+module Sollum
   module Lib
     VERSION = '3.0.0'
   end
@@ -65,4 +65,3 @@ module Gollum
   class NoSuchPathError < StandardError; end
 
 end
-

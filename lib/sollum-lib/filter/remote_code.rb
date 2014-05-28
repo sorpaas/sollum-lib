@@ -11,7 +11,7 @@ require 'open-uri'
 #              ```language:/abs/other-file.ext```
 #              ```language:https://example.com/somefile.txt```
 #
-class Gollum::Filter::RemoteCode < Gollum::Filter
+class Sollum::Filter::RemoteCode < Sollum::Filter
   def extract(data)
     return data if @markup.format == :txt
     data.gsub /^[ \t]*``` ?([^:\n\r]+):((http)?[^`\n\r]+)```/ do

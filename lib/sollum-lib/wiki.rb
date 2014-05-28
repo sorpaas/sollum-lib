@@ -1,5 +1,5 @@
 # ~*~ encoding: utf-8 ~*~
-module Gollum
+module Sollum
   class Wiki
     include Pagination
 
@@ -44,7 +44,7 @@ module Gollum
             if superclass.respond_to?(:page_class)
               superclass.page_class
             else
-              ::Gollum::Page
+              ::Sollum::Page
             end
       end
 
@@ -55,7 +55,7 @@ module Gollum
             if superclass.respond_to?(:file_class)
               superclass.file_class
             else
-              ::Gollum::File
+              ::Sollum::File
             end
       end
 
@@ -66,7 +66,7 @@ module Gollum
             if superclass.respond_to?(:markup_classes)
               superclass.markup_classes
             else
-              Hash.new(::Gollum::Markup)
+              Hash.new(::Sollum::Markup)
             end
       end
 
@@ -328,7 +328,7 @@ module Gollum
       multi_commit = !!commit[:committer]
       committer    = multi_commit ? commit[:committer] : Committer.new(self, commit)
 
-      filename = Gollum::Page.cname(sanitized_name)
+      filename = Sollum::Page.cname(sanitized_name)
 
       committer.add_to_index(sanitized_dir, filename, format, data)
 
@@ -419,7 +419,7 @@ module Gollum
       dir      = ::File.dirname(page.path)
       dir      = '' if dir == '.'
       filename = (rename = page.name != name) ?
-          Gollum::Page.cname(name) : page.filename_stripped
+          Sollum::Page.cname(name) : page.filename_stripped
 
       multi_commit = !!commit[:committer]
       committer    = multi_commit ? commit[:committer] : Committer.new(self, commit)
@@ -514,7 +514,7 @@ module Gollum
               path = $1
               ext  = ::File.extname(path)
               name = ::File.basename(path, ext)
-              if format = ::Gollum::Page.format_for(ext)
+              if format = ::Sollum::Page.format_for(ext)
                 files << [path, name, format]
               end
             end
@@ -635,10 +635,10 @@ module Gollum
     #
     # Returns an Array of Grit::Commit.
     def latest_changes(options={})
-      max_count = options.fetch(:max_count, 10)      
+      max_count = options.fetch(:max_count, 10)
       @repo.log(@ref, nil, options)
     end
-    
+
     # Public: Refreshes just the cached Git reference data.  This should
     # be called after every Gollum update.
     #

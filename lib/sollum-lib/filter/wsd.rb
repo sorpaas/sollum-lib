@@ -8,7 +8,7 @@ require 'open-uri'
 # Render an inline web sequence diagram by sending the WSD code through the
 # online renderer available from www.websequencediagrams.com.
 #
-class Gollum::Filter::WSD < Gollum::Filter
+class Sollum::Filter::WSD < Sollum::Filter
   WSD_URL = "http://www.websequencediagrams.com/index.php"
 
   # Extract all sequence diagram blocks into the map and replace with

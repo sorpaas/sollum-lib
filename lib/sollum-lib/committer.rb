@@ -1,5 +1,5 @@
 # ~*~ encoding: utf-8 ~*~
-module Gollum
+module Sollum
   # Responsible for handling the commit process for a Wiki.  It sets up the
   # Git index, provides methods for modifying the tree, and stores callbacks
   # to be fired after the commit has been made.  This is specifically

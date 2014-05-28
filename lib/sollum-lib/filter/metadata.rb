@@ -7,7 +7,7 @@
 # be included in this documentation without triggering
 # `Unhandled special: Special: type=17`
 # Please read the source code for the exact markers
-class Gollum::Filter::Metadata < Gollum::Filter
+class Sollum::Filter::Metadata < Sollum::Filter
   def extract(data)
     # The markers are `<!-- ---` and `-->`
     data.gsub(/\<\!--+\s+---(.*?)--+\>/m) do

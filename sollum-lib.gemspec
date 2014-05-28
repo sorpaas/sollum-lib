@@ -4,10 +4,9 @@ Gem::Specification.new do |s|
   s.rubygems_version = '0.0.1'
   s.required_ruby_version = '>= 1.9'
 
-  s.name              = 'gollum-lib'
+  s.name              = 'sollum-lib'
   s.version           = '3.0.0'
   s.date              = '2014-04-05'
-  s.rubyforge_project = 'gollum-lib'
   s.license           = 'MIT'
 
   s.summary     = 'A simple, Git-powered wiki.'
@@ -49,44 +48,8 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rb-fsevent', '~> 0.9.4'
   s.add_development_dependency 'rb-fchange', '~> 0.0.6'
   s.add_development_dependency 'twitter_cldr', '~> 2.4.2'
-  # = MANIFEST =
-  s.files = %w[
-    Gemfile
-    HISTORY.md
-    LICENSE
-    README.md
-    Rakefile
-    docs/sanitization.md
-    gollum-lib.gemspec
-    lib/gollum-lib.rb
-    lib/gollum-lib/blob_entry.rb
-    lib/gollum-lib/committer.rb
-    lib/gollum-lib/file.rb
-    lib/gollum-lib/file_view.rb
-    lib/gollum-lib/filter.rb
-    lib/gollum-lib/filter/code.rb
-    lib/gollum-lib/filter/metadata.rb
-    lib/gollum-lib/filter/plain_text.rb
-    lib/gollum-lib/filter/remote_code.rb
-    lib/gollum-lib/filter/render.rb
-    lib/gollum-lib/filter/sanitize.rb
-    lib/gollum-lib/filter/tags.rb
-    lib/gollum-lib/filter/toc.rb
-    lib/gollum-lib/filter/wsd.rb
-    lib/gollum-lib/git_access.rb
-    lib/gollum-lib/gitcode.rb
-    lib/gollum-lib/grit_ext.rb
-    lib/gollum-lib/helpers.rb
-    lib/gollum-lib/hook.rb
-    lib/gollum-lib/markup.rb
-    lib/gollum-lib/markups.rb
-    lib/gollum-lib/page.rb
-    lib/gollum-lib/pagination.rb
-    lib/gollum-lib/sanitization.rb
-    lib/gollum-lib/wiki.rb
-    licenses/licenses.txt
-  ]
-  # = MANIFEST =
+
+  s.files = `git ls-files -z`.split("\x0")
 
   s.test_files = s.files.select { |path| path =~ /^test\/test_.*\.rb/ }
 end

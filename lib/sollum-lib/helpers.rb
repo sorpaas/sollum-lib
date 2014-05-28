@@ -1,5 +1,5 @@
 # ~*~ encoding: utf-8 ~*~
-module Gollum
+module Sollum
   module Helpers
 
     def trim_leading_slash url

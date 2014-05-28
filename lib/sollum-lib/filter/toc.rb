@@ -1,5 +1,5 @@
 # Inserts header anchors and creates TOC
-class Gollum::Filter::TOC < Gollum::Filter
+class Sollum::Filter::TOC < Sollum::Filter
   def extract(d)
     d
   end

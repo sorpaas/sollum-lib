@@ -1,5 +1,5 @@
 # ~*~ encoding: utf-8 ~*~
-module Gollum
+module Sollum
   class Hook
     @hooks = {}
 

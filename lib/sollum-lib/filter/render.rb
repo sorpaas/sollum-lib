@@ -1,6 +1,6 @@
 # ~*~ encoding: utf-8 ~*~
 
-class Gollum::Filter::Render < Gollum::Filter
+class Sollum::Filter::Render < Sollum::Filter
   def extract(data)
     begin
       data = GitHub::Markup.render(@markup.name, data)

@@ -42,10 +42,10 @@
 # original markup or rendered forms, you can simply define the relevant
 # method to be a pass-through (`def extract(d) d; end`), but you *must*
 # define both methods yourself.
-#     
-module Gollum
+#
+module Sollum
   class Filter
-    include Gollum::Helpers
+    include Sollum::Helpers
 
     # Setup the object.  Sets `@markup` to be the instance of Gollum::Markup that
     # is running this filter chain, and sets `@map` to be an empty hash (for use

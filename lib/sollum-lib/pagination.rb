@@ -1,5 +1,5 @@
 # ~*~ encoding: utf-8 ~*~
-module Gollum
+module Sollum
   module Pagination
     def self.included(klass)
       klass.extend ClassMethods

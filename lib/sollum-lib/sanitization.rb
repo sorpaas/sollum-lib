@@ -1,5 +1,5 @@
 # ~*~ encoding: utf-8 ~*~
-module Gollum
+module Sollum
   # Encapsulate sanitization options.
   #
   # This class does not yet support all options of Sanitize library.
@@ -173,4 +173,3 @@ module Gollum
     end
   end
 end
-

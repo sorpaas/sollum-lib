@@ -1,5 +1,5 @@
 # ~*~ encoding: utf-8 ~*~
-module Gollum
+module Sollum
   class BlobEntry
     # Gets the String SHA for this blob.
     attr_reader :sha
@@ -66,7 +66,7 @@ module Gollum
     end
 
     def inspect
-      %(#<Gollum::BlobEntry #{@sha} #{@path}>)
+      %(#<Sollum::BlobEntry #{@sha} #{@path}>)
     end
 
     # Normalizes a given directory name for searching through tree paths.

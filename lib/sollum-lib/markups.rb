@@ -1,5 +1,5 @@
 # ~*~ encoding: utf-8 ~*~
-module Gollum
+module Sollum
   class Markup
     register(:markdown,  "Markdown", :regexp => /md|mkdn?|mdown|markdown/)
     register(:textile,   "Textile")

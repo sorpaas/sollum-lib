@@ -1,5 +1,5 @@
 # ~*~ encoding: utf-8 ~*~
-module Gollum
+module Sollum
 =begin
   FileView requires that:
     - All files in root dir are processed first

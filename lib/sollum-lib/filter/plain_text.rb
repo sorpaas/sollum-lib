@@ -4,7 +4,7 @@
 #
 # Render plain text documents in a <pre> block without any special markup.
 
-class Gollum::Filter::PlainText < Gollum::Filter
+class Sollum::Filter::PlainText < Sollum::Filter
 
   def extract(data)
     @markup.format == :txt ? "<pre>#{CGI.escapeHTML(data)}</pre>" : data

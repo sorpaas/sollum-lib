@@ -13,7 +13,7 @@ begin
 rescue Exception
 end
 
-module Gollum
+module Sollum
 
   class Markup
     include Helpers
@@ -24,8 +24,8 @@ module Gollum
 
       # Only use the formats that are specified in config.rb
       def formats
-        if defined? Gollum::Page::FORMAT_NAMES
-          @formats.select { |_, value| Gollum::Page::FORMAT_NAMES.values.include? value[:name] }
+        if defined? Sollum::Page::FORMAT_NAMES
+          @formats.select { |_, value| Sollum::Page::FORMAT_NAMES.values.include? value[:name] }
         else
           @formats
         end
@@ -93,7 +93,7 @@ module Gollum
       chain = [:Metadata, :PlainText, :TOC, :RemoteCode, :Code, :Sanitize, :WSD, :Tags, :Render]
 
       filter_chain = chain.map do |r|
-        Gollum::Filter.const_get(r).new(self)
+        Sollum::Filter.const_get(r).new(self)
       end
 
       process_chain data, filter_chain
@@ -142,7 +142,7 @@ module Gollum
 
       data         = @data.dup
       filter_chain = @wiki.filter_chain.map do |r|
-        Gollum::Filter.const_get(r).new(self)
+        Sollum::Filter.const_get(r).new(self)
       end
 
       # Since the last 'extract' action in our chain *should* be the markup

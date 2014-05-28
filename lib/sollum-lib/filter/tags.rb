@@ -1,7 +1,7 @@
 # ~*~ encoding: utf-8 ~*~
 
 # Render all tags (things in double-square-brackets).  This one's a biggie.
-class Gollum::Filter::Tags < Gollum::Filter
+class Sollum::Filter::Tags < Sollum::Filter
   # Extract all tags into the tagmap and replace with placeholders.
   def extract(data)
     return data if @markup.format == :txt || @markup.format == :asciidoc

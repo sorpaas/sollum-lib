@@ -1,5 +1,5 @@
 # ~*~ encoding: utf-8 ~*~
-module Gollum
+module Sollum
   class Page
     include Pagination
 
@@ -25,7 +25,7 @@ module Gollum
       return [] unless filename =~ /^(.+)\.([a-zA-Z]\w*)$/i
       pref, ext = $1, $2
 
-      Gollum::Markup.formats.each_pair do |name, format|
+      Sollum::Markup.formats.each_pair do |name, format|
         return [pref, name] if ext =~ format[:regexp]
       end
       []

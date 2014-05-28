@@ -1,5 +1,5 @@
 # ~*~ encoding: utf-8 ~*~
-module Gollum
+module Sollum
   # Controls all access to the Git objects from Gollum.  Extend this class to
   # add custom caching for special cases.
   class GitAccess
@@ -16,9 +16,9 @@ module Gollum
       begin
         @repo = Grit::Repo.new(path, { :is_bare => bare })
       rescue Grit::InvalidGitRepositoryError
-        raise Gollum::InvalidGitRepositoryError
+        raise Sollum::InvalidGitRepositoryError
       rescue Grit::NoSuchPathError
-        raise Gollum::NoSuchPathError
+        raise Sollum::NoSuchPathError
       end
       clear
     end

@@ -1,6 +1,6 @@
 # ~*~ encoding: utf-8 ~*~
 
-class Gollum::Filter::Sanitize < Gollum::Filter
+class Sollum::Filter::Sanitize < Sollum::Filter
   def extract(d)
     d
   end
